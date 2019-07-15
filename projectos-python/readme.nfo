@@ -1,0 +1,229 @@
+# *Install:*
+
+
+# Git
+## Install
+> sudo apt install Git
+
+## Configuration
+
+> git config --global user.email "you@example.com"
+> git config --global user.name "Your name"
+
+> git init
+> git add *
+>
+
+
+--
+
+
+# MongoDB
+
+https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu/
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+## install
+
+### Add Repository:
+
+> sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
+
+> echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+
+### Reload local package database:
+
+> sudo apt-get update
+
+### Go to Install:
+> sudo apt-get install -y mongodb-org
+
+
+
+## Start MongoDB.
+
+### Issue the following command to start mongod:
+
+> sudo service mongod start
+
+### Verify that MongoDB has started successfully
+
+Verify that the mongod process has started successfully by checking the contents of the log file at /var/log/mongodb/mongod.log for a line reading
+
+> [initandlisten] waiting for connections on port 27017
+
+27017 is the default port the standalone mongod listens on.
+
+You may see non-critical warnings in the mongod output. As long as you see the log line shown above, you can safely ignore these warnings during your initial evaluation of MongoDB.
+
+## Stop MongoDB.
+
+As needed, you can stop the mongod process by issuing the following command:
+
+> sudo service mongod stop
+
+
+
+## Restart MongoDB.
+
+Issue the following command to restart mongod:
+
+> sudo service mongod restart
+
+
+## Begin using MongoDB.
+
+Start a mongo shell on the same host machine as the mongod. You can run the mongo shell without any command-line options to connect to a mongod that is running on your localhost with default port 27017:
+
+> mongo
+
+--
+
+# Node.JS
+https://linuxconfig.org/how-to-install-node-js-on-ubuntu-18-04-bionic-beaver-linux
+
+
+## install
+
+
+> sudo apt update
+>
+> sudo apt install nodejs
+>
+> sudo apt install npm
+
+### versions
+
+> npm -v
+>
+> node -v
+
+
+# yarn
+
+#### install
+
+> curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+>
+> echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+> sudo apt update
+>
+> sudo apt install yarn
+>
+#### version
+
+> yarn --version
+
+
+
+# Python 3.7
+
+## Install
+
+### Add Repository & Stuff :
+
+> sudo apt update
+>
+> sudo apt install software-properties-common
+
+add the deadsnakes PPA to your sources list:
+
+> sudo add-apt-repository ppa:deadsnakes/ppa
+
+Once the repository is enabled, install Python 3.7 with:
+
+> sudo apt install python3.7
+
+#### version
+
+> python3.7 --version
+
+
+#### for Python 2.7.15
+
+> sudo apt install python
+
+
+### Installing pip for Python 3
+
+> sudo apt update
+
+> sudo apt install python3-pip
+
+The command above will also install all the dependencies required for
+building Python modules.
+
+Once the installation is complete, verify the installation by checking the pip version:
+
+> pip3 --version
+
+
+### Installing pip for Python 2
+
+> sudo apt update
+
+> sudo apt install python-pip
+
+Verify the installation by printing the pip version number:
+
+> pip --version
+
+
+
+
+
+# Extra ubuntu installs
+
+### Install media codecs
+
+*In order to play media files like MP#, MPEG4, AVI etc, you’ll need to install media codecs. Ubuntu has them in their repository but doesn’t install it by default because of copyright issues in various countries.*
+
+
+1. Install Ubuntu Restricted Extras
+
+> sudo apt install ubuntu-restricted-extras
+
+*If you encounter the EULA or the license screen, remember to use the tab key to select between the options and then hit enter to confirm your choice*
+
+--
+### You can install GNOME Tweaks via the Software Center or you can use the command below to install it:
+> sudo apt install gnome-tweak-tool
+
+
+2. How to Fix Right Click Touchpad Not Working on Ubuntu 18.04
+
+[ https://itsfoss.com/fix-right-click-touchpad-ubuntu/ ]
+
+> You need to install GNOME Tweaks tool first. It is available in Ubuntu Software Center.
+
+
+3. Add ‘New Document’ Option in Right Click Context Menu in Ubuntu 18.04
+
+[ https://itsfoss.com/add-new-document-option/ ]
+
+### How to install Conky [*HARD*]
+
+[ https://technastic.com/desktop-widgets-on-ubuntu-18-04-with-conky/ ]
+
+
+
+
+
+
+### *20 Must-Have Ubuntu Apps in 2019*
+
+1. Unity Teak Tool (or Gnome Tweak Tool)
+2. Google Chrome (Browser)
+3. VLC Media Player
+4. GIMP (Image Editing)
+5. Visual Studio Code (Text Editor)
+6. Simple Weather Indicator (Weather App)
+7. GitBook Editor (GitBook Workflow)
+8. Whatever (Evernote Alternative)
+9. Stacer (System Optimizer)
+10. Conky (Customization Tool)
+11. GDebi (Package Installer)  <--
+12. Open Pics (Free Image Resources)
+13. Atom (Text Editor)
+14. Sublime Text (Text Editor)
